@@ -44,24 +44,25 @@ What formula should the words follow? """).strip().lower())
 
 def add_random_letter(letter_dict):
     random_num = random.random()
+    
     random.seed(random_num)
     word_letter = random.choice(list(letter_dict.keys()))
+    
     random.seed(random_num)
     pro_letter = random.choice(list(letter_dict.values()))
-    return [word_letter, pro_letter]
+    
+    word_list.append(word_letter)
+    pro_word_list.append(pro_letter)
 
 for i in range(number_of_words):
     word_list = []
     pro_word_list = []
+    
     for letter in formula_list:
-        if letter == "v":
-            letter = add_random_letter(vowels)
-            word_list.append(letter[0])
-            pro_word_list.append(letter[1])
-        elif letter == "c":
-            letter = add_random_letter(consonants)
-            word_list.append(letter[0])
-            pro_word_list.append(letter[1])
+        if letter == "v": 
+            add_random_letter(vowels)
+        elif letter == "c": 
+            add_random_letter(consonants)
         else:
             word_list.append(letter)
             pro_word_list.append(letter)
