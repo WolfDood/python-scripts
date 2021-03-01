@@ -42,27 +42,28 @@ c = consonant
 Example: cvc
 What formula should the words follow? """).strip().lower())
 
+def add_random_letter(letter_dict):
+    random_num = random.random()
+    random.seed(random_num)
+    word_letter = random.choice(list(letter_dict.keys()))
+    random.seed(random_num)
+    pro_letter = random.choice(list(letter_dict.values()))
+    return [word_letter, pro_letter]
+
 for i in range(number_of_words):
     word_list = []
     pro_word_list = []
     for letter in formula_list:
         if letter == "v":
-            random_num = random.random()
-            random.seed(random_num)
-            word_list.append(random.choice(list(vowels.keys())))
-            random.seed(random_num)
-            pro_word_list.append(random.choice(list(vowels.values())))
+            letter = add_random_letter(vowels)
+            word_list.append(letter[0])
+            pro_word_list.append(letter[1])
         elif letter == "c":
-            random_num = random.random()
-            random.seed(random_num)
-            word_list.append(random.choice(list(consonants.keys())))
-            random.seed(random_num)
-            pro_word_list.append(random.choice(list(consonants.values())))
+            letter = add_random_letter(consonants)
+            word_list.append(letter[0])
+            pro_word_list.append(letter[1])
         else:
-            random_num = random.random()
-            random.seed(random_num)
-            word_list.append(list(letter.keys()))
-            random.seed(random_num)
-            pro_word_list.append(list(letter.values()))
+            word_list.append(letter)
+            pro_word_list.append(letter)
     
     print("Word {}: {}; Pronunciation: {}".format(i, "".join(word_list), "".join(pro_word_list)))
