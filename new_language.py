@@ -71,4 +71,4 @@ for i in range(number_of_words):
             word_list.append(letter)
             pro_word_list.append(letter)
     
-    print("Word {}: {}; Pronunciation: {}".format(i, "".join(word_list), "".join(pro_word_list)))
+    print("Word {}: {}; Pronunciation: {}".format(i+1, "".join(word_list), "".join(pro_word_list)))
