@@ -9,10 +9,14 @@ import random
 
 vowels = {
     "a": "ae",
+    "ǎ": "'aeou'",
     "e": "e",
     "i": "i",
     "o": "o",
+    "ǒ": "'ou'",
+    "ø": "ur",
     "u": "a",
+    "ǔ": "'aou'",
     "y": "ii"
 }
 
@@ -23,14 +27,14 @@ consonants = {
     "h": "h",
     "j": "j'",
     "k": "k",
-    "m": "m",
-    "n": "n",
+    "m": "n",
+    "n": "m",
     "s": "s",
     "sj": "sh",
     "t": "t",
-    "tj": "ch",
+    "tj": "tch",
     "v": "f",
-    "w": "v",
+    "w": "v"
 }
 
 number_of_words = int(input("How many words do you want to generate? "))
