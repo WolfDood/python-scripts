@@ -25,16 +25,18 @@ consonants = {
     "d": "d",
     "g": "g",
     "h": "h",
-    "j": "j'",
+    "j": "dj",
     "k": "k",
-    "m": "n",
-    "n": "m",
+    "m": "m",
+    "n": "n",
+    "p": "p",
     "s": "s",
     "sj": "sh",
     "t": "t",
     "tj": "tch",
     "v": "f",
-    "w": "v"
+    "w": "v",
+    "z": "z",
 }
 
 number_of_words = int(input("How many words do you want to generate? "))
