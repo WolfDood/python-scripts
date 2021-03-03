@@ -9,27 +9,30 @@ import random
 
 vowels = {
     "a": "ae",
-    "ǎ": "'aeou'",
     "e": "e",
     "i": "i",
     "o": "o",
-    "ǒ": "'ou'",
-    "ø": "ur",
     "u": "a",
-    "ǔ": "'aou'",
-    "y": "ii"
+    "y": "ii",
+    "ø": "ur",
+    "ø̌": "oh",
+    "ǔ": "aow",
+    "ǎ": "ow",
+    "ǒ": "ou",
 }
 
 consonants = {
     "b": "b",
     "d": "d",
+    "dj": "j",
     "g": "g",
     "h": "h",
-    "j": "dj",
+    "j": "j'",
     "k": "k",
     "m": "m",
     "n": "n",
     "p": "p",
+    "r": "rr",
     "s": "s",
     "sj": "sh",
     "t": "t",
