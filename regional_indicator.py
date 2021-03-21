@@ -1,14 +1,14 @@
 from string import ascii_lowercase
 from sys import argv
 
-converted = []
+converted_message = []
 
 argv.pop(0)
 
-args = " ".join(argv).lower()
+message = " ".join(argv).lower()
 
-for l in args:
-	if l in list(ascii_lowercase): converted.append(":regional_indicator_{}: ".format(l))
-	else: converted.append(" {} ".join(l))
+for letter in message:
+	if letter in list(ascii_lowercase): converted_message.append(f":regional_indicator_{letter}: ")
+	else: converted_message.append(" {} ".join(letter))
 
-print("".join(converted))
+print("".join(converted_message))
