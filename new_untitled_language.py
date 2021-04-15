@@ -4,6 +4,7 @@ ipa = {
 	"'": "", # Placeholder character, has no sound
 	"`": "", # Alt placeholder character
 	"‘": "", # Second verse, same as the first
+	"’": "",
 	# Consonants
 	"b": "b",
 	"d": "d",
@@ -31,17 +32,17 @@ ipa = {
 }
 
 if __name__ == "__main__":
-	print("New Untitled Language Translator v1.0.0")
+	print("New Untitled Language Translator v1.0.1")
 	while True:
 		sentence = input("Please enter a sentence to translate from New Untitled Language to IPA. Type \":exit\" to exit.\n>> ")
-		if sentence == ":exit": break
+		if sentence == ":exit" or sentence == ":e": break
 
 		translated = []
 		for char in list(sentence):
-			if char not in ipa:
+			if char not in ipa and char.lower() not in ipa:
 				print(f"Invalid character: \"{char}\"")
 				continue
-			translated.append(ipa[char])
+			translated.append(ipa[char.lower()])
 		
 		result = "".join(translated)
 		print(f"Result:\n{result}")
