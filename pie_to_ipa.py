@@ -66,7 +66,7 @@ while True:
 	# If lower stress is at start of a word (i.e., there's a space behind it, change it to upper stress)
 	for i, char in enumerate(to_translate):
 		if char == secondary_stress:
-			if to_translate[i-1] == " ":
+			if to_translate[i-1] == " " or i == 0:
 				t = list(to_translate)
 				t[i] = primary_stress
 				to_translate = "".join(t)
